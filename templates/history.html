@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login/Register
+{% endblock %}
+{% block main %}
+
+    {% if no_booking != "none" %}
+        <form class="table_body" style="width: auto;" action="/history" method="post">
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Procedure</th>
+                    <!-- <th scope="col">Comment</th> -->
+                    <th scope="col">Date</th>
+                    <th scope="col">Cancel</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% set count = 1 %}
+                    {% for reserve in reservations %}
+                        <tr>
+                            <th scope="row" class="num-row">{{ loop.index }}</th>
+                            <td>{{ reserve[1] }}</td>
+                            <!-- <td>{{ reserve[2] }}</td> -->
+                            <td>{{ reserve[3] }}</td>
+                            {% if check_cancellation(reserve[3]) %}
+                                <td><button name="selected_button" value="{{ reserve[3] }}">Cancel</button></td>
+                            {% else %}
+                                <td><button class="cancel" disabled name="selected_button" value="{{ reserve[3] }}">Cancel</button></td>
+                            {% endif %}
+                        </tr>
+                        {% set count = count + 1 %}
+                    {% endfor %}
+                <!-- <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr> -->
+                </tbody>
+        </table>
+        </form>
+    {% endif %}
+
+{% endblock %}

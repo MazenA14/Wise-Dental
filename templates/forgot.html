@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login/Register
+{% endblock %}
+{% block main %}
+
+    <style>
+        .login_form {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 290px;
+            text-align: center;
+        }
+    </style>
+
+    <form action="/forgot" class="login_form" method="post">
+        <h2>Reset password</h2>
+
+        <label for="email">Email:</label> <!--<span style="color: #F10C0C; font-size: 13px;">*Required</span>-->
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <label for="password">Password:</label> <!--<span style="color: #F10C0C; font-size: 13px;">*Required At least 8 characters long</span>-->
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <label for="confirmPassword">Confirm Password:</label> <!--<span style="color: #F10C0C; font-size: 13px;">*Required</span>-->
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
+        <!-- <div class="account_reminder">
+            Already have an account?  <a href="/login" style="font-weight: bold;">Login</a>
+        </div> -->
+
+        <button type="submit">Reset password</button>
+    </form>
+
+{% endblock %}

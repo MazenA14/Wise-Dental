@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login/Register
+{% endblock %}
+{% block main %}
+
+    <style>
+        .login_form {
+            /* margin-top: 20px; */
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 290px;
+            text-align: center;
+        }
+    </style>
+
+    <form action="/login" class="login_form" method="post">
+        <h2>Login</h2>
+
+        <label for="email">Email:</label> <!--<span style="color: #F10C0C; font-size: 13px;">*Required</span>-->
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <label for="password">Password:</label> <!--<span style="color: #F10C0C; font-size: 13px;">*Required</span>-->
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <div class="account_reminder">
+            Forgot password? <a href="/forgot">Reset</a>
+        </div>
+        <div class="account_reminder">
+            Don't have an account yet?  <a href="/register">Register</a>
+        </div>
+        <button type="submit">Log In</button>
+    </form>
+
+{% endblock %}

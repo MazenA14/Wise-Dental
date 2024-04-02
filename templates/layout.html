@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link href="/static/tooth.ico" rel="icon">
+
+</head>
+
+<body>
+
+    <header class="custom_header">
+        <a href="/" class="wise-dental" style="">Wise Dental</a>
+        <nav>
+            <ul>
+                <li><a href="/" class="tabs">HOME</a></li>
+                <li class="dropdown">
+                    <a class="tabs">SERVICES</a>
+                    <ul class="dropdown-menu overlay-list">
+                        <hr class="tab_line">
+                        <li class="nested-dropdown">
+                            <a href="/info_general">GENERAL</a>
+                            <ul class="nested-dropdown-menu">
+                                <hr class="tab_line">
+                                <li class="second-nested-dropdown">
+                                    <a href="#">COMING SOON</a>
+                                    <!-- <ul class="second-nested-dropdown-menu">
+                                        <li><a href="#">Sub-Sub-Service 1.1.1</a></li>
+                                        <li><a href="#">Sub-Sub-Service 1.1.2</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="#">COMING SOON</a></li>
+                            </ul>
+                        </li>
+                        <li class="nested-dropdown">
+                            <a href="/info_cosmetic">COSMETIC</a>
+                            <ul class="nested-dropdown-menu">
+                                <hr class="tab_line">
+                                <li class="second-nested-dropdown">
+                                    <a href="#">COMING SOON</a>
+                                    <!-- <ul class="second-nested-dropdown-menu">
+                                        <li><a href="#">Sub-Sub-Service 2.1.1</a></li>
+                                        <li><a href="#">Sub-Sub-Service 2.1.2</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="#">COMING SOON</a></li>
+                            </ul>
+                        </li>
+                        <li class="nested-dropdown">
+                            <a href="/info_surgical">SURGICAL</a>
+                            <ul class="nested-dropdown-menu">
+                                <hr class="tab_line">
+                                <li class="second-nested-dropdown">
+                                    <a href="#">COMING SOON</a>
+                                    <!-- <ul class="second-nested-dropdown-menu">
+                                        <li><a href="#">Sub-Sub-Service 2.1.1</a></li>
+                                        <li><a href="#">Sub-Sub-Service 2.1.2</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="#">COMING SOON</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="tabs">APPOINTMENTS</a>
+                    <ul class="dropdown-menu dropdown-menu-extra">
+                        <hr class="tab_line">
+                        <li class="nested-dropdown">
+                            <a href="/reserve">Book A Spot</a>
+                            <!-- <ul class="nested-dropdown-menu">
+                                <hr class="tab_line">
+                                <li class="second-nested-dropdown">
+                                    <a href="#">Sub-Product 1.1</a>
+                                    <ul class="second-nested-dropdown-menu">
+                                        <li><a href="#">Sub-Sub-Product 1.1.1</a></li>
+                                        <li><a href="#">Sub-Sub-Product 1.1.2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Sub-Product 1.2</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="nested-dropdown">
+                            <a href="/history">Previous Bookings</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="tabs">ABOUT</a>
+                    <ul class="dropdown-menu">
+                        <hr class="tab_line">
+                        <li class="nested-dropdown">
+                            <a href="#">DOCTORS</a>
+                            <ul class="nested-dropdown-menu nested-dropdown-menu-right">
+                                <hr class="tab_line">
+                                <li class="second-nested-dropdown">
+                                    <a href="#">COMING SOON</a>
+                                    <!-- <ul class="second-nested-dropdown-menu">
+                                        <li><a href="#">Sub-Sub-Service 1.1.1</a></li>
+                                        <li><a href="#">Sub-Sub-Service 1.1.2</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="#">COMING SOON</a></li>
+                            </ul>
+                        </li>
+                        <li class="nested-dropdown">
+                            <a href="#">PORTFOLIOS</a>
+                            <ul class="nested-dropdown-menu nested-dropdown-menu-right">
+                                <hr class="tab_line">
+                                <li class="second-nested-dropdown">
+                                    <a href="#">COMING SOON</a>
+                                    <!-- <ul class="second-nested-dropdown-menu">
+                                        <li><a href="#">Sub-Sub-Service 2.1.1</a></li>
+                                        <li><a href="#">Sub-Sub-Service 2.1.2</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="#">COMING SOON</a></li>
+                            </ul>
+                        </li>
+                        <li class="nested-dropdown">
+                            <a href="#">INFO</a>
+                            <ul class="nested-dropdown-menu nested-dropdown-menu-right">
+                                <hr class="tab_line">
+                                <li class="second-nested-dropdown">
+                                    <a href="#">COMING SOON</a>
+                                    <!-- <ul class="second-nested-dropdown-menu">
+                                        <li><a href="#">Sub-Sub-Service 2.1.1</a></li>
+                                        <li><a href="#">Sub-Sub-Service 2.1.2</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="#">COMING SOON</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                {% if session["user_id"] == 2 %}
+                <!-- <form class="admin-tab" action="/admin" method="post"> -->
+                    <li class="dropdown">
+                        <a class="tabs" href="/admin">Admin</a>
+                        <ul class="dropdown-menu overlay-list">
+                            <hr class="tab_line">
+                            <li class="nested-dropdown">
+                                <a href="#">COMING SOON</a>
+                                <!-- <ul class="nested-dropdown-menu">
+                                    <hr class="tab_line">
+                                    <li class="second-nested-dropdown">
+                                        <a href="#">Sub-Service 1.1</a>
+                                        <ul class="second-nested-dropdown-menu">
+                                            <li><a href="#">Sub-Sub-Service 1.1.1</a></li>
+                                            <li><a href="#">Sub-Sub-Service 1.1.2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Sub-Service 1.2</a></li>
+                                </ul> -->
+                            </li>
+                            <li class="nested-dropdown">
+                                <a href="#">COMING SOON</a>
+                                <!-- <ul class="nested-dropdown-menu">
+                                    <hr class="tab_line">
+                                    <li class="second-nested-dropdown">
+                                        <a href="#">Sub-Service 2.1</a>
+                                        <ul class="second-nested-dropdown-menu">
+                                            <li><a href="#">Sub-Sub-Service 2.1.1</a></li>
+                                            <li><a href="#">Sub-Sub-Service 2.1.2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Sub-Service 2.2</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="#">COMING SOON</a></li>
+                        </ul>
+                    </li>
+                <!-- </form> -->
+                {% endif %}
+
+                {% if session["user_id"] %}
+                    <li><a href="/logout" class="login">Logout</a></li>
+                {% else %}
+                    <li><a href="/login" class="login">Sign-in</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="custom_body">
+
+        {% if get_flashed_messages() %}
+            <header>
+                {% for category, message in get_flashed_messages(with_categories=true) %}
+                    {% if category == "error" %}
+                        <div class="alert alert-danger alert-dismissible show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% elif category == "success" %}
+                        <div class="alert alert-success alert-dismissible show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-warning alert-dismissible show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </header>
+        {% endif %}
+
+        <main class="container-fluid py-5 text-center"> <!--style="background-color: #1EFFBC;"-->
+            <div>
+                {% block main %}{% endblock %}
+            </div>
+        </main>
+
+        <footer class="footer  mx-auto"> <!--#266980   class="fixed-bottom mb-5 small text-center text-muted footer"-->
+        <a href="#" class="fa fa-instagram fa-10x"></a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <p style="font-size: 12px; margin-bottom: 5px; margin-top: 0px; color: white;">&copy; 2023 Mazen All rights reserved.</p>
+        </footer>
+
+    </div>
+
+<!-- https://www.villagedentaldtc.com/ -->
+
+</body>
+</html>

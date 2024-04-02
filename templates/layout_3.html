@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <div class="large-header">
+        <div class="large-header-items">
+            <div class="large-header-text-box">
+                {% block secondary_header %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    {% block third_header %}{% endblock %}
+
+    <style>
+        main {
+            width: 100%;
+        }
+    </style>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "layout_2.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+{% block secondary_header %}
+
+    Welcome to Wise Dental, Best dentistry in town
+
+{% endblock %}
+
+{% block third_header %}
+
+    <div class="learn-more-header">
+        <h1 style="font-size: 50px; padding-top: 60px; margin: 0;">Our Services</h1>
+            <div class="header-section-left">
+                <img src="/static/dental office 1.jpeg" alt="Dental Office" class="learn-more-img-1">
+                <div class="header-section-text-box-heading">
+                    General
+                </div>
+                <div class="header-section-text-box">
+                    Everything you expect and then some. Cleanings, fillings, and x-rays are just the beginning.
+                </div>
+                <div>
+                    <a href="/info_general" class="learn-more">Learn More</a>
+                </div>
+            </div>
+            <div class="header-section-center">
+                <img src="/static/dental office 2.jpg" alt="Dental Office" class="learn-more-img-2">
+                <div class="header-section-text-box-heading">
+                    Cosmetic
+                </div>
+                <div class="header-section-text-box">
+                    Discover your “wow!” factor. Invisalign, veneers, and in-office or take-home teeth whitening.
+                </div>
+                <div>
+                    <a href="/info_cosmetic" class="learn-more">Learn More</a>
+                </div>
+            </div>
+            <div class="header-section-right">
+                <img src="/static/dental office 3.jpeg" alt="Dental Office" class="learn-more-img-3">
+                <div class="header-section-text-box-heading">
+                    Surgical
+                </div>
+                <div class="header-section-text-box">
+                    We can fix anything. Our dentists repair damaged or lost teeth with cutting-edge implants and more.
+                </div>
+                <div>
+                    <a href="/info_surgical" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

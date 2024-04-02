@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <div class="large-header">
+        <div class="large-header-items">
+            <div class="large-header-text-box">
+                {% block secondary_header %}{% endblock %}
+            </div>
+            <div style="margin-top: 40px; margin-bottom: 40px; margin-left: 59px;">
+                <a href="/reserve" class="login" style="font-size: 22px; margin: 0; padding: 20px;">Book Online</a>
+            </div>
+            <div class="phone_number">
+                OR CALL 01255005127
+            </div>
+        </div>
+    </div>
+    {% block third_header %}{% endblock %}
+
+    <style>
+        main {
+            width: 100%;
+        }
+    </style>
+
+{% endblock %}

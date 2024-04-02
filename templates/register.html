@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <form action="/register" method="post" style="font-family: Sans Regular;">
+        <h2>Registration</h2>
+        <secion class="form-group">
+            <div style="margin-right: 15px;">
+                <label for="firstName">First Name:<span style="color: #F10C0C; font-size: 13px;">*Required</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="First name" style="width: 212px;" required>
+            </div>
+            <div>
+                <label for="lastName">Last Name:<span style="color: #F10C0C; font-size: 13px;">*Required</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Second name" style="width: 223px;" required>
+            </div>
+        </secion>
+
+        <label for="email">Email:<span style="color: #F10C0C; font-size: 13px;">*Required</span></label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <label for="password">Password:<span style="color: #F10C0C; font-size: 13px;">*Required At least 8 characters long</span></label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <label for="confirmPassword">Confirm Password:<span style="color: #F10C0C; font-size: 13px;">*Required</span></label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
+
+        <label for="telephone">Telephone Number:<span style="color: #F10C0C; font-size: 13px;">*Required</span></label>
+        <input type="tel" id="telephone" name="telephone" placeholder=" Mobile number" required>
+
+        <label for="date_of_birth">Date of Birth:<span style="color: #F10C0C; font-size: 12px;">*Required</span></label>
+        <input type="date" id="date_of_birth" name="date_of_birth" required>
+
+        <div class="account_reminder">
+            Already have an account?  <a href="/login" style="font-weight: bold;">Login</a>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+{% endblock %}
