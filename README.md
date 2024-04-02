@@ -1,7 +1,7 @@
 # Wise Dental
 #### Video Demo:  <https://www.youtube.com/watch?v=tzHIBoyS884>
 #### Description:
-A full dentistry online system for reservation and info
+A basic dental office system for reservation and info
 
 ## Design debate:
 I Kept going back and forth between 4 different palettes (until right before the submission), but stayed with this white/cream/dark gray/soft pink palette as it seemed more modern and fitting
