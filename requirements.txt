@@ -1,0 +1,8 @@
+sqlite3
+Flask
+Flask-Session
+requests
+datetime
+helpers
+werkzeug.security
+functools
